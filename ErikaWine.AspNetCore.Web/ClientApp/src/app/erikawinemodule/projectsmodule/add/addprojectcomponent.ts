@@ -1,41 +1,39 @@
-import { Component  } from '@angular/core';
+import { Component, Input  } from '@angular/core';
 import { NbDialogRef } from '@nebular/theme';
-import {AddShopRoleDefinitionDTO} from '../../dto/shopmanagerdto';
-import {ShopHttpService} from '../../../httpservices/shopservices/shophttpservice';
+import {AddProjectHttpDTO} from '../../dto/erikawineprojectdto';
+import {ProjectHttpService} from '../../services/httpservices/projectshttpservice';
 @Component({
-   selector: 'add-shop-staff-role-definition',
-    templateUrl: './addshopstaffroledefinition.html',
+   selector: 'add-project',
+    templateUrl: './addprojectcomponent.html',
     styles: [`
       nb-card {
         transform: translate3d(0, 0, 0);
       }
     `],
   })
-  export class AddShopStaffRoleDefinitionComponent  {
+  export class AddProjectComponent  {
+    public AddProjectHttpDTO:AddProjectHttpDTO;
     constructor(
-        protected ref: NbDialogRef<AddShopStaffRoleDefinitionComponent>,
-        private ShopHttpService:ShopHttpService,
+        protected ref: NbDialogRef<AddProjectComponent>,
+        private svc:ProjectHttpService,
     )
     {     
-     this.AddShopRoleDefinitionDTO = new AddShopRoleDefinitionDTO();
-    }
-    AddShopRoleDefinitionDTO:AddShopRoleDefinitionDTO;
+     this.AddProjectHttpDTO = new AddProjectHttpDTO();
+    }  
     cancel() {
       this.ref.close();
-    }
-  
+    } 
     submit(name) {
       this.ref.close(name);
     }
-    AddShotStaffRoleDefinitionLoading:boolean = false;
-    AddNewShopStaffRoleDefinition()
+    Loader:boolean = false;
+    Add()
     {
-      this.AddShotStaffRoleDefinitionLoading = true;
-      this.ShopHttpService.AddShopStaffRoleDefinition(this.AddShopRoleDefinitionDTO).subscribe(data=>{
-        this.AddShotStaffRoleDefinitionLoading = false;
+      this.Loader = true;
+      this.svc.Add(this.AddProjectHttpDTO).subscribe(data=>{
+        this.Loader = false;
         this.submit('Refresh');
-      })
-     
+      })  
     }
 }
 

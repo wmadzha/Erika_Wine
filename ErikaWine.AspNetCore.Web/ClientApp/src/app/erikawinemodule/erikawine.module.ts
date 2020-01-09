@@ -17,6 +17,12 @@ import {ErikaModuleService} from './services/moduleservices/erikamoduleservice';
 import {ErrorHttpService} from './services/httpservices/errorhttpservice';
 import {ModuleHttpService} from './services/httpservices/modulehttpservice';
 import {ProjectHttpService} from './services/httpservices/projectshttpservice';
+
+
+import { AddProjectComponent} from './projectsmodule/add/addprojectcomponent';
+import {ErikaWineUIModules} from '../erikawinemodule/shareduimodules/erikawinesharedmodules';
+
+
 @NgModule({
   imports: [
     ErikaWineRouting,
@@ -25,10 +31,14 @@ import {ProjectHttpService} from './services/httpservices/projectshttpservice';
     ProjectModule,
     ModulesModule,
     ErrorModule,
-
+    ErikaWineUIModules,
   ],
   declarations: [
     ErikaWineComponent,
+   // AddProjectComponent,
+  ],
+  entryComponents:[
+   // AddProjectComponent,
   ],
   providers:[
     ErikaModuleService,

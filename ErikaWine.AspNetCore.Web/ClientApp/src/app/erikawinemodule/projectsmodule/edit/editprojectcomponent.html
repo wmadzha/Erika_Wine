@@ -5,13 +5,13 @@
     </h6>
         <hr>
         <div style="width: 600px !important;height:300px !important;">
-            <div class="row">
+            <div *ngIf='UpdateProjectHttpDTO !== null' class="row"  >
                 <div class="col-md-12">
                     Project Name
                     <hr>
                     <div class="input-group">
                         <input shape="semi-round"
-                        [(ngModel)]='AddProjectHttpDTO.ProjectName'
+                        [(ngModel)]='UpdateProjectHttpDTO.ProjectName'
                         nbInput type="text" class="form-control"  placeholder="Project Name" />
                     </div>
                     <hr>
@@ -21,21 +21,21 @@
                     <hr>
                     <div class="input-group">
                         <textarea  shape="semi-round"
-                        [(ngModel)]='AddProjectHttpDTO.ProjectDescription'
+                        [(ngModel)]='UpdateProjectHttpDTO.ProjectDescription'
                         nbInput type="text" class="form-control" cols="1" rows="5"   placeholder="Project Description" ></textarea> 
                     </div>
                     <hr>
                 </div>
                 <div class="col-md-12">
                     <div>
-                        <button  nbButton size='small' (click)='Add()' status='success'>
-                            Add New Project
+                        <button  nbButton size='small' (click)='Edit()' status='success'>
+                            Edit
                         </button>
                         <button nbButton size='small' (click)="cancel()" style="margin-left: 10px;" status='danger'>
                             Cancel
                         </button>
                     </div>
-                </div>
+                </div> 
             </div>
             </div>
     </nb-card-body>

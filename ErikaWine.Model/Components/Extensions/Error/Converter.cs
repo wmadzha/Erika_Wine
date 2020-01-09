@@ -38,6 +38,7 @@ namespace ErikaWine.Model.Components
                 ErrorCode = Data.ErrorCode,
                 ErrorDescription = Data.ErrorDescription,
                 ErrorNumber = Data.ErrorNumber,
+                 
             };
         }
         public static List<GetErrorHttpDTO> Convert(this List<Database.Error> Data)

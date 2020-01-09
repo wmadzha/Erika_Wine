@@ -10,10 +10,10 @@ export class ProjectHttpService{
         {
 
         }
-        AddAddress:string = "";
-        UpdateAddress:string = "";
-        DeleteAddress:string = "";
-        GetAddress:string= "";
+        AddAddress:string = "/api/project/2a9o9UDT0Lt834Lw1j2HzxYPqmEgEkbcScGRqGnyAPzM";
+        UpdateAddress:string = "/api/project/XWowjRH0EK58BuyIz1LNvttToIjRv7lPfaCHdS";
+        DeleteAddress:string = "/api/project/34Lw1j2HzxYPqmEgEkXWowjRH0EK58BuyIz1";
+        GetAddress:string= "/api/project/klg4kK8O2JfyXLWDlcEpC9UtqJjq87naHEWXKxtR6gOd9";
         Add(dto:any): Observable<any>{
             return this.svc.Post(this.AddAddress,dto);
         } 
@@ -24,6 +24,6 @@ export class ProjectHttpService{
             return this.svc.Post(this.DeleteAddress,dto);
         } 
         Get(parameterwithstring:string): Observable<any>{
-            return this.svc.Get(parameterwithstring);
+            return this.svc.Get(this.GetAddress);
         } 
 }

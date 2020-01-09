@@ -2,7 +2,7 @@
     <nb-card-body>
         My Projects 
         <hr>
-        <button style="margin-bottom: 20px;"  nbButton size='small' (click)='OpenAddShopSalesItem()' status='primary'>
+        <button style="margin-bottom: 20px;"  nbButton size='small' (click)='Add()' status='primary'>
             Add New Projects
         </button>
         <div *ngIf='GetProjectHttpDTO.length === 0'>
@@ -25,10 +25,13 @@
                     {{project.projectName}}
                 </div>
                 <div class='col-md-3'>
-                    <button style="margin-bottom: 20px;"  nbButton size='small' (click)='OpenAddShopSalesItem()' status='primary'>
+                    <button   nbButton size='tiny' (click)='Details(project)' status='primary'>
                         Details
                     </button>
-                    <button style="margin-bottom: 20px;"  nbButton size='small' (click)='OpenAddShopSalesItem()' status='danger'>
+                    <button style="margin-left: 10px;" (click)='Edit(project)'   nbButton size='tiny'  status='info'>
+                        Edit
+                    </button>
+                    <button style="margin-left: 10px;"   nbButton size='tiny' (click)='Delete()' status='danger'>
                         Delete
                     </button>
                 </div>

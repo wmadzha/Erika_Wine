@@ -37,7 +37,18 @@ namespace ErikaWine.AspNetCore.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
+            // Angular Dev ports Options
+            app.UseCors(
+              options => options.WithOrigins(
+                  "http://localhost:4200",
+                  "http://localhost:4201",
+                  "http://localhost:4202",
+                  "http://localhost:4203",
+                  "http://localhost:4204"
+                  )
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              );
             // instantiate Erika's db 
 
             app.EnsureErikaHappy();

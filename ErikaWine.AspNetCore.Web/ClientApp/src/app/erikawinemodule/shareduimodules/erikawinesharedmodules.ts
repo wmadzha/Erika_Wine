@@ -8,8 +8,9 @@ import {
     NbSpinnerModule,
     NbUserModule,
     NbTabsetModule,
+    NbDialogModule,
 } from '@nebular/theme';
-
+import { FormsModule } from '@angular/forms';
 export const ErikaWineUIModules:any[] = [
     NbCardModule,
     NbSelectModule,
@@ -19,5 +20,7 @@ export const ErikaWineUIModules:any[] = [
     NbSpinnerModule,
     NbUserModule,
     NbTabsetModule,
+    FormsModule,
+    NbDialogModule.forChild(),
 ]
    

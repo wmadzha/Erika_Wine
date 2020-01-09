@@ -10,7 +10,7 @@ export class ErikaModuleService{
     }
     GetEndpointAddress()
     {
-        return ' http://localhost:63517';
+        return 'https://localhost:44374';
     }
     GetHttpOptions()
     {

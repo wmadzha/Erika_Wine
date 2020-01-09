@@ -18,10 +18,11 @@ export class UpdateProjectHttpDTO {
     public ProjectName: string;
     public ProjectDescription: string;
     public ProjectId:string;
-    constructor(dto:UpdateProjectHttpDTO)
+    constructor(dto:GetProjectHttpDTO)
     {
-        this.ProjectId = dto.ProjectId;
-        this.ProjectName = dto.ProjectName;
-        this.ProjectDescription = dto.ProjectDescription;
+        console.log(dto);
+        this.ProjectName = dto.projectName;
+        this.ProjectDescription = dto.projectDescription;
+        this.ProjectId = dto.projectId;
     }
 }

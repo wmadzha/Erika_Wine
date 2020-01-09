@@ -26,6 +26,7 @@ namespace ErikaWine.Model.Components
             {
                 ProjectDescription = Data.ProjectDescription,
                 ProjectName = Data.ProjectName,
+                 ProjectId = Data.ProjectId,
             };
         }
         public static List<GetProjectHttpDTO> Convert(this List<Database.Project> Data)
