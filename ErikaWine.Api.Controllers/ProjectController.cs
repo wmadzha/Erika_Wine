@@ -11,7 +11,6 @@ namespace ErikaWine.Api.Controllers
     [ApiController]
     public class ProjectController : ControllerBase
     {
-        //public IErikaWineEngine ErikaEngine { get; set; }
         private ProjectResults Result { get; set; }
         public ProjectController(IErikaWineEngine eng)
         {
@@ -43,7 +42,6 @@ namespace ErikaWine.Api.Controllers
         {
             return Result.Delete(Data);
         }
-        //[Route(constants.ContollerPath.Get)]
         [Route(constants.ContollerPath.Get)]
         [HttpGet]
         public IActionResult Get()

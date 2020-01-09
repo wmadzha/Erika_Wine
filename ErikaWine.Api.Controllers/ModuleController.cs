@@ -11,14 +11,12 @@ namespace ErikaWine.Api.Controllers
     [ApiController]
     public class ModuleController : ControllerBase
     {
-        public IErikaWineEngine ErikaEngine { get; set; }
         private ModuleResults Result { get; set; }
         public ModuleController(IErikaWineEngine eng)
         {
             if (eng == null)
                 throw new ArgumentNullException("Service Is Null : " + typeof(IErikaWineEngine));
-            this.ErikaEngine = eng;
-            this.Result = new ModuleResults(this.ErikaEngine);
+            this.Result = new ModuleResults(eng);
         }
         [Route(constants.ContollerPath.Add)]
         [HttpPost]
