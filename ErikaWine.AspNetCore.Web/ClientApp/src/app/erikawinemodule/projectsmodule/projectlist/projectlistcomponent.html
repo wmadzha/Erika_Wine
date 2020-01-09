@@ -1,0 +1,41 @@
+<nb-card>
+    <nb-card-body>
+        My Projects 
+        <hr>
+        <button style="margin-bottom: 20px;"  nbButton size='small' (click)='OpenAddShopSalesItem()' status='primary'>
+            Add New Projects
+        </button>
+        <div *ngIf='GetProjectHttpDTO.length === 0'>
+           <span style="margin-right: 10px;padding-left: 10px;padding-right: 10px;" class="badge badge-warning" > ! </span> opps looks like there is no project found
+        </div>
+        <div *ngIf='GetProjectHttpDTO.length !== 0'>
+            <div class="row">
+                <div class='col-md-9'>
+                    Project Name
+                </div>
+                <div class='col-md-3'>
+                   
+                </div>
+                <div class='col-md-12'>
+                   <hr>
+                </div>
+            </div>
+            <div class="row" *ngFor='let project of GetProjectHttpDTO' >
+                <div class='col-md-9'>
+                    {{project.projectName}}
+                </div>
+                <div class='col-md-3'>
+                    <button style="margin-bottom: 20px;"  nbButton size='small' (click)='OpenAddShopSalesItem()' status='primary'>
+                        Details
+                    </button>
+                    <button style="margin-bottom: 20px;"  nbButton size='small' (click)='OpenAddShopSalesItem()' status='danger'>
+                        Delete
+                    </button>
+                </div>
+                <div class='col-md-12'>
+                   <hr>
+                </div>
+            </div>
+        </div>
+    </nb-card-body>
+</nb-card>
