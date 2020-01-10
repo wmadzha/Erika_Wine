@@ -1,7 +1,7 @@
 import { Component, Input  } from '@angular/core';
 import { NbDialogRef } from '@nebular/theme';
-import {AddProjectHttpDTO} from '../../dto/erikawineprojectdto';
 import {ProjectHttpService} from '../../services/httpservices/projectshttpservice';
+import {GetProjectHttpDTO} from '../../dto/erikawineprojectdto';
 @Component({
    selector: 'details-project',
     templateUrl: './projectdetailscomponent.html',
@@ -12,13 +12,12 @@ import {ProjectHttpService} from '../../services/httpservices/projectshttpservic
     `],
   })
   export class ProjectDetailsComponent  {
-    public AddProjectHttpDTO:AddProjectHttpDTO;
+    @Input() GetProjectHttpDTO:GetProjectHttpDTO;
     constructor(
         protected ref: NbDialogRef<ProjectDetailsComponent>,
         private svc:ProjectHttpService,
     )
     {     
-     this.AddProjectHttpDTO = new AddProjectHttpDTO();
     }  
     cancel() {
       this.ref.close();
@@ -27,13 +26,5 @@ import {ProjectHttpService} from '../../services/httpservices/projectshttpservic
       this.ref.close(name);
     }
     Loader:boolean = false;
-    Add()
-    {
-      this.Loader = true;
-      this.svc.Add(this.AddProjectHttpDTO).subscribe(data=>{
-        this.Loader = false;
-        this.submit('Refresh');
-      })  
-    }
 }
 

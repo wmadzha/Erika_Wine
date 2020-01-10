@@ -1,42 +1,25 @@
 <nb-card >
     <nb-card-body>
-    <h6>Edit Project
+    <h6>{{GetProjectHttpDTO.projectName}} | Modules
         <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
     </h6>
         <hr>
-        <div style="width: 600px !important;height:300px !important;">
-            <div class="row">
-                <div class="col-md-12">
-                    Project Name
+        <div style="width: 800px !important;height:450px !important;">
+            <nb-tabset>
+                <nb-tab tabTitle='Project Modules'>
+                    <button style="margin-bottom: 20px;"  nbButton size='small' (click)='Add()' status='primary'>
+                        Add New Module
+                    </button>
                     <hr>
-                    <div class="input-group">
-                        <input shape="semi-round"
-                        [(ngModel)]='AddProjectHttpDTO.ProjectName'
-                        nbInput type="text" class="form-control"  placeholder="Project Name" />
-                    </div>
+                </nb-tab>
+                <nb-tab tabTitle='Project Details'>
+                    <br>
+                    Project Name : {{GetProjectHttpDTO.projectName}}
                     <hr>
-                </div>
-                <div class="col-md-12">
-                    Project Description
-                    <hr>
-                    <div class="input-group">
-                        <textarea  shape="semi-round"
-                        [(ngModel)]='AddProjectHttpDTO.ProjectDescription'
-                        nbInput type="text" class="form-control" cols="1" rows="5"   placeholder="Project Description" ></textarea> 
-                    </div>
-                    <hr>
-                </div>
-                <div class="col-md-12">
-                    <div>
-                        <button  nbButton size='small' (click)='Add()' status='success'>
-                            Add New Project
-                        </button>
-                        <button nbButton size='small' (click)="cancel()" style="margin-left: 10px;" status='danger'>
-                            Cancel
-                        </button>
-                    </div>
-                </div>
-            </div>
+                    Project Description <br>
+                    {{GetProjectHttpDTO.projectDescription}}
+                </nb-tab>
+            </nb-tabset>
             </div>
     </nb-card-body>
 </nb-card>

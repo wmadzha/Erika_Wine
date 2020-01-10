@@ -4,6 +4,7 @@ import {GetProjectHttpDTO} from '../../dto/erikawineprojectdto';
 import { NbDialogService } from '@nebular/theme';
 import { AddProjectComponent } from '../add/addprojectcomponent';
 import { EditProjectComponent} from '../edit/editprojectcomponent';
+import {ProjectDetailsComponent} from '../details/projectdetailscomponent';
 @Component({
   selector: 'project-list',
   templateUrl: './projectlistcomponent.html',
@@ -38,9 +39,19 @@ export class ProjectListComponent implements OnInit {
         }
       });
     }
-    Details()
+    Details(dto:GetProjectHttpDTO)
     {
-
+      this.NbDialogService.open(ProjectDetailsComponent, {
+        context: {
+          GetProjectHttpDTO:dto,
+        },
+        closeOnBackdropClick: false,
+      }).onClose.subscribe(action => {
+        if (action === "Refresh") {
+          this.Get();
+        }
+      });
+      
     }
     Edit(dto:GetProjectHttpDTO)
     {
