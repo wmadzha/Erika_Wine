@@ -39,7 +39,7 @@ namespace ErikaWine.Api.Results
         {
             try
             {
-                return new OkObjectResult(ErikaEngine.ErrorService.Get(projectid));
+                return new OkObjectResult(ErikaEngine.ModuleService.Get(projectid));
             }
             catch (Exception)
             {

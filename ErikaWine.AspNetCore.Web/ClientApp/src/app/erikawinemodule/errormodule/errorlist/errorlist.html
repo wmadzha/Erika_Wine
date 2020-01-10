@@ -1,0 +1,53 @@
+
+<nb-card >
+    <nb-card-body>
+        <h6>Error List | {{GetModuleHttpDTO.moduleName}} | {{GetProjectHttpDTO.projectName}}
+            <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
+        </h6>
+        <hr>
+        <div style="width: 1000px !important;height:450px !important;">    
+            <button style="margin-bottom: 20px;" nbButton size='small' (click)='Add()' status='primary'>
+                Add New Error
+             </button>
+             <div *ngIf='GetErrorHttpDTO.length === 0'>
+                 <span style="margin-right: 10px;padding-left: 10px;padding-right: 10px;" class="badge badge-warning"> ! </span>
+                 opps looks like there is no error defined found in this module
+             </div>
+             <div *ngIf='GetErrorHttpDTO.length !== 0'>
+                 <div class="row">
+                     <div class='col-md-2'>
+                         Error Code
+                     </div>
+                     <div class='col-md-8'>
+                         Error Message
+                     </div>
+                     <div class='col-md-2'>            
+                     </div>
+                     <div class='col-md-12'>
+                         <hr>
+                     </div>
+                 </div>
+                 <div class="row" *ngFor='let errors of GetErrorHttpDTO'>
+                     <div class='col-md-2'>
+                         {{errors.errorCode}}
+                     </div>
+                     <div class='col-md-8'>
+                         {{errors.erroMessage}}
+                     </div>
+                     <div class='col-md-2'>
+                         <button style="margin-left: 10px;" (click)='Edit(errors)' nbButton size='tiny' status='info'>
+                             Edit
+                         </button>
+                         <button style="margin-left: 10px;" nbButton size='tiny' (click)='Delete(errors)' status='danger'>
+                             Delete
+                         </button>
+                     </div>
+                     <div class='col-md-12'>
+                         <hr>
+                     </div>
+                 </div>
+             </div>
+        </div>
+        <br>
+    </nb-card-body> 
+</nb-card>

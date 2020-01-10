@@ -7,6 +7,7 @@ import {ProjectListComponent} from './projectlist/projectlistcomponent';
 import {AddProjectComponent} from './add/addprojectcomponent';
 import {EditProjectComponent} from './edit/editprojectcomponent';
 import {ProjectDetailsComponent} from './details/projectdetailscomponent';
+import {ModuleListComponent} from '../modulesmodule/moduleslist/modulelist';
 @NgModule({
   imports: [
     ...ErikaWineUIModules,
@@ -18,12 +19,14 @@ import {ProjectDetailsComponent} from './details/projectdetailscomponent';
     AddProjectComponent,
     EditProjectComponent,
     ProjectDetailsComponent,
+    ModuleListComponent,
   ],
   entryComponents:[
     ProjectListComponent,
     AddProjectComponent,
     EditProjectComponent,
     ProjectDetailsComponent,
+    ModuleListComponent,
   ]
 })
 export class ProjectModule {

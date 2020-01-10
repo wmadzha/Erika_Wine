@@ -1,23 +1,23 @@
-<nb-card >
+<nb-card  >
     <nb-card-body>
     <h6>{{GetProjectHttpDTO.projectName}} | Modules
         <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
     </h6>
         <hr>
-        <div style="width: 800px !important;height:450px !important;">
+        <div style="width:1000px !important;height:450px !important;" >
             <nb-tabset>
                 <nb-tab tabTitle='Project Modules'>
-                    <button style="margin-bottom: 20px;"  nbButton size='small' (click)='Add()' status='primary'>
-                        Add New Module
-                    </button>
-                    <hr>
+                    <module-list [GetProjectHttpDTO]='GetProjectHttpDTO' ></module-list>
                 </nb-tab>
                 <nb-tab tabTitle='Project Details'>
                     <br>
-                    Project Name : {{GetProjectHttpDTO.projectName}}
+                    Project Name 
                     <hr>
-                    Project Description <br>
-                    {{GetProjectHttpDTO.projectDescription}}
+                    <h5> {{GetProjectHttpDTO.projectName}}</h5>
+                    <hr>
+                    Project Description <hr>
+                   <h6> {{GetProjectHttpDTO.projectDescription}}</h6>
+                    <hr>
                 </nb-tab>
             </nb-tabset>
             </div>

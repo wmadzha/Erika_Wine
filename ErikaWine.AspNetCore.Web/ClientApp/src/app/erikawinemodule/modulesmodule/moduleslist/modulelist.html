@@ -1,0 +1,46 @@
+<br>
+<button style="margin-bottom: 20px;" nbButton size='small' (click)='Add()' status='primary'>
+    Add New Module
+</button>
+<div *ngIf='GetModuleHttpDTO.length === 0'>
+    <span style="margin-right: 10px;padding-left: 10px;padding-right: 10px;" class="badge badge-warning"> ! </span>
+    opps looks like there is no module found for this project
+</div>
+<div *ngIf='GetModuleHttpDTO.length !== 0'>
+    <div class="row">
+        <div class='col-md-6'>
+            Module Name
+        </div>
+        <div class='col-md-3'>
+            Module Prefix Code
+        </div>
+        <div class='col-md-3'>
+
+        </div>
+        <div class='col-md-12'>
+            <hr>
+        </div>
+    </div>
+    <div class="row" *ngFor='let modules of GetModuleHttpDTO'>
+        <div class='col-md-6'>
+            {{modules.moduleName}}
+        </div>
+        <div class='col-md-3'>
+            {{modules.moduleErrorPrefix}}
+        </div>
+        <div class='col-md-3'>
+            <button nbButton size='tiny' (click)='Details(modules)' status='primary'>
+                Manage
+            </button>
+            <button style="margin-left: 10px;" (click)='Edit(modules)' nbButton size='tiny' status='info'>
+                Edit
+            </button>
+            <button style="margin-left: 10px;" nbButton size='tiny' (click)='Delete(modules)' status='danger'>
+                Delete
+            </button>
+        </div>
+        <div class='col-md-12'>
+            <hr>
+        </div>
+    </div>
+</div>

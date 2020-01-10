@@ -11,6 +11,10 @@ export class AddErrorHttpDTO {
 }
 export class DeleteErrorHttpDTO {
     public ErrorId: string;
+    constructor(errorid:string)
+    {
+        this.ErrorId = errorid;
+    }
 }
 export class GetErrorHttpDTO {
     public errorNumber: number;

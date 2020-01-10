@@ -1,0 +1,50 @@
+<nb-card >
+    <nb-card-body>
+    <h6>Define New Module To | {{GetProjectHttpDTO.projectName}}
+        <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
+    </h6>
+        <hr>
+        <div style="width: 600px !important;height:230px !important;">
+            <div class="row">
+                <div class="col-md-6">
+                    Module Name
+                    <hr>
+                    <div class="input-group">
+                        <input shape="semi-round"
+                        [(ngModel)]='AddModuleHttpDTO.ModuleName'
+                        nbInput type="text" class="form-control"  placeholder="Module Name" />
+                    </div>
+                    <hr>
+                    Module Error Prefix
+                    <hr>
+                    <div class="input-group">
+                        <input shape="semi-round"
+                        [(ngModel)]='AddModuleHttpDTO.ModuleErrorPrefix'
+                        nbInput type="text" class="form-control"  placeholder="Module Error Prefix" />
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    Module Description
+                    <hr>
+                    <div class="input-group">
+                        <textarea  shape="semi-round"
+                        [(ngModel)]='AddModuleHttpDTO.ModuleDescription'
+                        nbInput type="text" class="form-control" cols="1" rows="6"   placeholder="Module Description" ></textarea> 
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-12">
+                    <div>
+                        <button  nbButton size='small' (click)='Add()' status='success'>
+                            Add New Module
+                        </button>
+                        <button nbButton size='small' (click)="cancel()" style="margin-left: 10px;" status='danger'>
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </nb-card-body>
+</nb-card>

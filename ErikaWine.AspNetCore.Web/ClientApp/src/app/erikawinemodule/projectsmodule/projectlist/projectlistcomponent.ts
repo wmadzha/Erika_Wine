@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProjectHttpService} from '../../services/httpservices/projectshttpservice';
-import {GetProjectHttpDTO} from '../../dto/erikawineprojectdto';
+import {GetProjectHttpDTO,DeleteProjectHttpDTO} from '../../dto/erikawineprojectdto';
 import { NbDialogService } from '@nebular/theme';
 import { AddProjectComponent } from '../add/addprojectcomponent';
 import { EditProjectComponent} from '../edit/editprojectcomponent';
@@ -10,12 +10,12 @@ import {ProjectDetailsComponent} from '../details/projectdetailscomponent';
   templateUrl: './projectlistcomponent.html',
 })
 export class ProjectListComponent implements OnInit {
+  DeleteProjectHttpDTO:DeleteProjectHttpDTO;
     constructor(
       private projecthttpservice:ProjectHttpService,
       private NbDialogService:NbDialogService,
       )
     {
-
     }
     ngOnInit(){
       this.Get();
@@ -66,8 +66,13 @@ export class ProjectListComponent implements OnInit {
         }
       });
     }
-    Delete()
+    Delete(dto:GetProjectHttpDTO)
     {
-
+      this.DeleteProjectHttpDTO = new DeleteProjectHttpDTO(dto.projectId);
+          this.projecthttpservice.Delete(this.DeleteProjectHttpDTO).subscribe(
+            data=>{
+              this.Get();
+            }
+          );
     }
 }

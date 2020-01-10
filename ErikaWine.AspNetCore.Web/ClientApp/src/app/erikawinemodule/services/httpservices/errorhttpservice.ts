@@ -9,10 +9,10 @@ export class ErrorHttpService{
         private svc: ErikaModuleService)
         {
         }
-        AddAddress:string = "";
-        UpdateAddress:string = "";
-        DeleteAddress:string = "";
-        GetAddress:string= "";
+        AddAddress:string = "/api/error/2a9o9UDT0Lt834Lw1j2HzxYPqmEgEkbcScGRqGnyAPzM";
+        UpdateAddress:string = "/api/error/XWowjRH0EK58BuyIz1LNvttToIjRv7lPfaCHdS";
+        DeleteAddress:string = "/api/error/34Lw1j2HzxYPqmEgEkXWowjRH0EK58BuyIz1";
+        GetAddress:string= "/api/error/klg4kK8O2JfyXLWDlcEpC9UtqJjq87naHEWXKxtR6gOd9";
         Add(dto:any): Observable<any>{
             return this.svc.Post(this.AddAddress,dto);
         } 

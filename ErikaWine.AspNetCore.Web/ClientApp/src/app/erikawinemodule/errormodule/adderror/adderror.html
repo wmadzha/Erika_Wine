@@ -1,0 +1,50 @@
+<nb-card >
+    <nb-card-body>
+    <h6>Define New Error To | {{GetModuleHttpDTO.moduleName}} | {{GetProjectHttpDTO.projectName}}
+        <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
+    </h6>
+        <hr>
+        <div style="width: 600px !important;height:250px !important;">
+            <div class="row">
+                <div class="col-md-6">
+                    Error Code
+                    <hr>
+                    <div class="input-group">
+                        <input shape="semi-round"
+                        [(ngModel)]='AddErrorHttpDTO.ErrorCode'
+                        nbInput type="text" class="form-control"  placeholder="Error Code" />
+                    </div>
+                    <hr>
+                    Error Message
+                    <hr>
+                    <div class="input-group">
+                        <textarea shape="semi-round" cols="1" rows="3"
+                        [(ngModel)]='AddErrorHttpDTO.ErroMessage'
+                        nbInput type="text" class="form-control"  placeholder="Error Message" ></textarea>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    Error Description
+                    <hr>
+                    <div class="input-group">
+                        <textarea  shape="semi-round"
+                        [(ngModel)]='AddErrorHttpDTO.ErrorDescription'
+                        nbInput type="text" class="form-control" cols="1" rows="8"   placeholder="Error Description" ></textarea> 
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-12">
+                    <div>
+                        <button  nbButton size='small' (click)='Add()' status='success'>
+                            Add New Error
+                        </button>
+                        <button nbButton size='small' (click)="cancel()" style="margin-left: 10px;" status='danger'>
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </nb-card-body>
+</nb-card>

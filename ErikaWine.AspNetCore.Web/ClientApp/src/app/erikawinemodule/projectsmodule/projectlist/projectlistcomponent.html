@@ -3,7 +3,7 @@
         My Projects 
         <hr>
         <button style="margin-bottom: 20px;"  nbButton size='small' (click)='Add()' status='primary'>
-            Add New Projects
+            Add New Project
         </button>
         <div *ngIf='GetProjectHttpDTO.length === 0'>
            <span style="margin-right: 10px;padding-left: 10px;padding-right: 10px;" class="badge badge-warning" > ! </span> opps looks like there is no project found
@@ -30,7 +30,7 @@
                     <button style="margin-left: 10px;" (click)='Edit(project)'   nbButton size='tiny'  status='info'>
                         Edit
                     </button>
-                    <button style="margin-left: 10px;"   nbButton size='tiny' (click)='Delete()' status='danger'>
+                    <button style="margin-left: 10px;"   nbButton size='tiny' (click)='Delete(project)' status='danger'>
                         Delete
                     </button>
                 </div>

@@ -10,10 +10,10 @@ export class ModuleHttpService{
         {
 
         }
-        AddAddress:string = "";
-        UpdateAddress:string = "";
-        DeleteAddress:string = "";
-        GetAddress:string= "";
+        AddAddress:string = "/api/module/2a9o9UDT0Lt834Lw1j2HzxYPqmEgEkbcScGRqGnyAPzM";
+        UpdateAddress:string = "/api/module/XWowjRH0EK58BuyIz1LNvttToIjRv7lPfaCHdS";
+        DeleteAddress:string = "/api/module/34Lw1j2HzxYPqmEgEkXWowjRH0EK58BuyIz1";
+        GetAddress:string= "/api/module/klg4kK8O2JfyXLWDlcEpC9UtqJjq87naHEWXKxtR6gOd9";
         Add(dto:any): Observable<any>{
             return this.svc.Post(this.AddAddress,dto);
         } 
