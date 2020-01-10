@@ -6,7 +6,6 @@ namespace ErikaWine.Database
         private readonly string ConnectionString;
         public ErrorCodeBaseContext()
         {
-            this.ConnectionString = "Data Source=ADZHAZBOOK\\SQLEXPRESS;Initial Catalog=ErrorCodeBase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             this.Database.EnsureCreated();
         }
         public ErrorCodeBaseContext(DbContextOptions<ErrorCodeBaseContext> options)

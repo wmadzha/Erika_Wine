@@ -23,8 +23,8 @@ namespace ErikaWine.AspNetCore.Web
 
             // Register Erika's engines and database connections
             string connection = Configuration.GetConnectionString("erikaconnection");
-            services.GetErikasPhoneNumber(Configuration, ErikaServiceBuilder.DataStoreType.MicrosoftSQL)
-                .AskErikaOut(Configuration);
+            services.GetErikasPhoneNumber(Configuration, ErikaServiceBuilder.DataStoreType.MicrosoftSQL);
+            //    .AskErikaOut(Configuration);
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
