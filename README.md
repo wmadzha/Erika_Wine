@@ -5,7 +5,7 @@ Erika Wine is trying to help speed up the process of developing/managing a speci
 
 Implementation ? . 
 
-Erika Wine is the place for developer store/define their error codes , thourghout development process or other process in SDLC there will be a time where we might need to embed this error code definitions into our business solutions. Reduce complexity by define it here and let Erika Wine generate the appropriate error code concrete class and error lists.
+Erika Wine is the place for developer store/define their error codes , thourghout development process or other process in SDLC there will be a time where we might need to embed this error code definitions into our business solutions. Reduce complexity by define it here and let Erika Wine generate the appropriate errors concrete classes and error lists.
 
 Current Supported Platform ? 
 
