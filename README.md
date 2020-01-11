@@ -40,7 +40,7 @@ Akveo - Nebular Angular Components : [View License](https://github.com/akveo/neb
 Akveo - Ngx-dashboard : [View License](https://github.com/akveo/ngx-admin/blob/master/LICENSE)
 
 
-**Microsoft Open Source Team **
+**Microsoft Open Source Team**
 
 Microsoft Asp.Net Core : [View License](https://github.com/dotnet/aspnetcore/blob/master/LICENSE.txt)
 
