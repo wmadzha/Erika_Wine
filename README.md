@@ -32,12 +32,9 @@ https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine3.png?raw=true
 
 Special Thanks
 
-Akveo - Nebular Angular Components
-[License](https://github.com/akveo/nebular/blob/master/LICENSE.txt)
-License : 
+Akveo - Nebular Angular Components : [View License](https://github.com/akveo/nebular/blob/master/LICENSE.txt)
 
-Akveo - Ngx-dashboard . 
 
-License : https://github.com/akveo/ngx-admin/blob/master/LICENSE
+Akveo - Ngx-dashboard : [View License](https://github.com/akveo/ngx-admin/blob/master/LICENSE)
 
 
