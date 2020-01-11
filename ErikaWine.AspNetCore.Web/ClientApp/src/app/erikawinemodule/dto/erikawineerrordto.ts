@@ -24,6 +24,27 @@ export class GetErrorHttpDTO {
     public moduleId: string;
     public errorId: string;
 }
+export class GetErrorHttpDTOWithSelect {
+    public errorNumber: number;
+    public errorCode: string;
+    public erroMessage: string;
+    public errorDescription: string;
+    public moduleId: string;
+    public errorId: string;
+    public selected:boolean;
+    constructor(dto:GetErrorHttpDTO)
+    {
+        this.erroMessage = dto.erroMessage;
+        this.errorCode = dto.errorCode;
+        this.errorDescription = dto.errorDescription;
+        this.errorId = dto.errorId;
+        this.errorNumber = dto.errorNumber;
+        this.moduleId = dto.moduleId;
+        this.selected = false;
+    }
+}
+
+
 export class UpdateErrorHttpDTO {
     public ErrorNumber: number;
     public ErrorCode: string;

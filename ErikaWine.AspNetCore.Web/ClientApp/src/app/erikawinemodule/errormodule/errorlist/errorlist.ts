@@ -6,6 +6,7 @@ import {GetErrorHttpDTO, DeleteErrorHttpDTO} from '../../dto/erikawineerrordto';
 import {GetProjectHttpDTO} from '../../dto/erikawineprojectdto';
 import { AddErrorComponent }from '../adderror/adderror';
 import {EditErrorComponent} from '../editerror/editerror';
+import {ErrorClassGenerator} from '../errorclassgenerator/errorclassgenerator';
 @Component({
   selector: 'error-list',
   templateUrl: './errorlist.html',
@@ -70,7 +71,6 @@ export class ErrorListComponent implements OnInit {
           GetProjectHttpDTO:this.GetProjectHttpDTO,
           GetModuleHttpDTO:this.GetModuleHttpDTO,
           GetErrorHttpDTO:dto
-
         },
         closeOnBackdropClick: false,
       }).onClose.subscribe(action => {
@@ -87,5 +87,21 @@ export class ErrorListComponent implements OnInit {
           this.Get();
          }
        )
+    }
+
+    Generate()
+    {
+      this.NbDialogService.open(ErrorClassGenerator, {
+        context: {
+          GetProjectHttpDTO:this.GetProjectHttpDTO,
+          GetModuleHttpDTO:this.GetModuleHttpDTO,
+          GetErrorHttpDTO:this.GetErrorHttpDTO,
+        },
+        closeOnBackdropClick: false,
+      }).onClose.subscribe(action => {
+        if (action === "Refresh") {
+          this.Get();
+        }
+      });
     }
 }

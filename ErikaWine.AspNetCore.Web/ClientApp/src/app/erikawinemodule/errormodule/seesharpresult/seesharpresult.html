@@ -1,0 +1,44 @@
+<nb-card >
+    <nb-card-body>
+    <h6>c# | {{GetModuleHttpDTO.moduleName}} | {{GetProjectHttpDTO.projectName}}
+        <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
+    </h6>
+        <hr>
+        <div style="width: 1100px !important;height:480px !important;">
+            <div class="row">
+                <div class="col-md-6">
+                    Concrete Class 
+                    <button nbButton status="success" style="float: right;" size='tiny' (click)="copyConcrete()">Copy To Clipboard</button>
+                    <hr>
+                    <div class="input-group">
+                        <textarea #concretetextarea shape="semi-round"
+                        [(ngModel)]='ConcreteClass'
+                        nbInput type="text" class="form-control" cols="1" rows="10"  placeholder="Concrete Class" ></textarea>
+                    </div>
+                    <hr>
+                    Required Usings
+                    <button nbButton status="success" style="float: right;" size='tiny' (click)="CopyUsings()">Copy To Clipboard</button>
+                    <hr>
+                    <div class="input-group">
+                        <textarea #requiredusingstextarea shape="semi-round"
+                        [(ngModel)]='RequiredUsings'
+                        nbInput type="text" class="form-control" cols="1" rows="8"  placeholder="Required Usings" ></textarea>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-6">
+                    Error Lists
+                    <button nbButton status="success" style="float: right;" size='tiny' (click)="CopyLists()">Copy To Clipboard</button>
+                    <hr>
+                    <div class="input-group">
+                        <textarea  #errorlistextarea  shape="semi-round"
+                        [(ngModel)]='ListClasses'
+                        nbInput type="text" class="form-control" cols="1" rows="22"   placeholder="Error Lists" ></textarea> 
+                    </div>
+                    <hr>
+                </div>
+                
+            </div>
+            </div>
+    </nb-card-body>
+</nb-card>

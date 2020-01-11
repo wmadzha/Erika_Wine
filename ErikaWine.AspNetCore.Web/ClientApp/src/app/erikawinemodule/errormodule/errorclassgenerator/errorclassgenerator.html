@@ -1,0 +1,68 @@
+
+<nb-card >
+    <nb-card-body>
+        <h6>Error List | {{GetModuleHttpDTO.moduleName}} | {{GetProjectHttpDTO.projectName}}
+            <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
+        </h6>
+        <hr>
+        <div style="width: 1000px !important;height:450px !important;">    
+            <button s nbButton size='small' (click)='TypeScript()' status='primary'>
+                Generate Typescript Class
+             </button>
+             <button style="margin-left: 10px;" nbButton size='small' (click)='SeeSharp()' status='primary'>
+                Generate C# Class
+             </button>
+             <div *ngIf='GetErrorHttpDTOWithSelect.length === 0'>
+                 <span style="margin-right: 10px;padding-left: 10px;padding-right: 10px;" class="badge badge-warning"> ! </span>
+                 opps looks like there is no error defined found in this module
+             </div>
+             <div *ngIf='GetErrorHttpDTOWithSelect.length !== 0'>
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                      <h6> Please select error to be generated</h6>
+                      <hr>
+                      <button  nbButton   size='tiny' (click)='SelectAll()' status='primary'>
+                        Select All
+                     </button>
+                      <button  nbButton style="margin-left: 10px;" size='tiny' (click)='RemoveAll()' status='danger'>
+                        Remove All
+                     </button>
+                       <hr>
+                    </div>
+                </div>
+                 <div class="row">
+                     <div class="col-md-1">
+                        Selected
+                     </div>
+                     <div class='col-md-2'>
+                         Error Code
+                     </div>
+                     <div class='col-md-9'>
+                         Error Message
+                     </div>
+                    
+                     <div class='col-md-12'>
+                         <hr>
+                     </div>
+                 </div>
+                 <div class="row" *ngFor='let errors of GetErrorHttpDTOWithSelect'>
+                    <div class="col-md-1">
+                        <nb-checkbox status="primary" [(ngModel)]='errors.selected'  ></nb-checkbox>
+                    </div>
+                     <div class='col-md-2'>
+                         {{errors.errorCode}}
+                     </div>
+                     <div class='col-md-9'>
+                         {{errors.erroMessage}}
+                     </div>
+                     
+                     <div class='col-md-12'>
+                         <hr>
+                     </div>
+                 </div>
+             </div>
+        </div>
+        <br>
+    </nb-card-body> 
+</nb-card>
