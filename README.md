@@ -11,4 +11,20 @@ Current Supported Platform ?
 
 As for now Erika just interested in doing it for Typescript And C# . 
 
+How It Works ? 
 
+1. Define Errors In Your Modules 
+
+![alt text](
+https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine1.png?raw=true)
+
+
+2. Select Which Error You Want To Add To Your Business Modules
+
+![alt text](
+https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine2.png?raw=true)
+
+3. Generate Typescript Or C# classes that will be embed on the Business/Front End library projects
+
+![alt text](
+https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine3.png?raw=true)
