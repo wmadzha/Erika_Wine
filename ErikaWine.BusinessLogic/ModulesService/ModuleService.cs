@@ -46,6 +46,8 @@ namespace ErikaWine.BusinessLogic
             try
             {
                 var dbData = _Context.Modules.Where(x => x.ModulesId == Data.ModulesId).FirstOrDefault();
+                var dbError = _Context.Error.Where(x => x.ModuleId == dbData.ModulesId).ToList();
+                _Context.Error.RemoveRange(dbError);
                 _Context.Modules.Remove(dbData);
                 _Context.SaveChanges();
                 return true;
