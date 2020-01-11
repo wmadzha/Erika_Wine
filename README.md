@@ -24,7 +24,7 @@ https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine1.png?raw=true
 ![alt text](
 https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine2.png?raw=true)
 
-3. Generate Typescript Or C# classes that will be embed on the Business/Front End library projects
+3. Generate Typescript Or C# classes that will be embedded into the Business/Front End library projects
 
 ![alt text](
 https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine3.png?raw=true)
