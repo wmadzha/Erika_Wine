@@ -28,3 +28,22 @@ https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine2.png?raw=true
 
 ![alt text](
 https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine3.png?raw=true)
+
+
+**Special Thanks To**
+
+**Akveo**
+
+Akveo - Nebular Angular Components : [View License](https://github.com/akveo/nebular/blob/master/LICENSE.txt)
+
+
+Akveo - Ngx-dashboard : [View License](https://github.com/akveo/ngx-admin/blob/master/LICENSE)
+
+
+**Microsoft Open Source Team**
+
+Microsoft Asp.Net Core : [View License](https://github.com/dotnet/aspnetcore/blob/master/LICENSE.txt)
+
+Microsoft Entity Framework Core : [View License](https://github.com/dotnet/efcore/blob/master/LICENSE.txt)
+
+Microsoft .NETCore : [View License](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)
