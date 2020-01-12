@@ -46,11 +46,11 @@ export class TypeScriptResultComponent implements OnInit {
     GenerateList()
     {
         var ListDef:string = `
-        export systemErrorList : systemError [] = [`;
+        export class systemErrorList : systemError [] = [`;
         this.GetErrorHttpDTOWithSelect.forEach(element => {
             if(element.selected === true)
             {
-                console.log('Hit')
+               
                 ListDef = ListDef +
         `
             {

@@ -98,7 +98,7 @@ export class CoreModule {
     return <ModuleWithProviders>{
       ngModule: CoreModule,
       providers: [
-        ...NB_CORE_PROVIDERS,
+      ...NB_CORE_PROVIDERS,
       ],
     };
   }
