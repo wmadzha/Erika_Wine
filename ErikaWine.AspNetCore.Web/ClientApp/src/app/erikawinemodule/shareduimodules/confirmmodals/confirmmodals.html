@@ -1,0 +1,24 @@
+<nb-card >
+    <nb-card-body>
+    <h6>{{OkConfirmModalData.Title}}
+        <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
+    </h6>
+        <hr>
+        <div style="width: 600px !important;">
+            <div class="row">             
+                <div class="col-md-12">
+                    <div>
+                        {{OkConfirmModalData.Message}}
+                        <hr>
+                        <button nbButton size='small' (click)="submit()"  status='primary'>
+                            Confirm
+                        </button>
+                        <button style="margin-left: 10px;" nbButton size='small' (click)="cancel()"  status='danger'>
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </nb-card-body>
+</nb-card>

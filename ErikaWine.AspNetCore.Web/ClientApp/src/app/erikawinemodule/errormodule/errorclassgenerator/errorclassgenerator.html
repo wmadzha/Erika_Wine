@@ -1,7 +1,11 @@
 
 <nb-card >
     <nb-card-body>
-        <h6>Error List | {{GetModuleHttpDTO.moduleName}} | {{GetProjectHttpDTO.projectName}}
+        <h6>
+            <button nbButton status="primary" style="float: left;margin-top: 0px;" size='tiny' (click)="cancel()">
+                &lt;
+            </button>&nbsp;&nbsp;
+            Error List | {{GetModuleHttpDTO.moduleName}} | {{GetProjectHttpDTO.projectName}}
             <button nbButton status="danger" style="float: right;" size='tiny' (click)="cancel()">X</button>
         </h6>
         <hr>
@@ -13,6 +17,7 @@
                 Generate C# Class
              </button>
              <div *ngIf='GetErrorHttpDTOWithSelect.length === 0'>
+                 <br> 
                  <span style="margin-right: 10px;padding-left: 10px;padding-right: 10px;" class="badge badge-warning"> ! </span>
                  opps looks like there is no error defined found in this module
              </div>

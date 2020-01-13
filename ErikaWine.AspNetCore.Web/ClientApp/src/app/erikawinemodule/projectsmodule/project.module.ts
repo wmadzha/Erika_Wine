@@ -10,6 +10,7 @@ import {ProjectDetailsComponent} from './details/projectdetailscomponent';
 import {ModuleListComponent} from '../modulesmodule/moduleslist/modulelist';
 import {HelpDisplayComponnt} from '../helpandinfomodule/helpdisplaycomponent/helpcomponent';
 import {HelpPageService} from '../helpandinfomodule/helppagesservice/helppageservice';
+import {ConfirmModalsComponent} from '../shareduimodules/confirmmodals/confirmmodals'
 @NgModule({
   imports: [
     ...ErikaWineUIModules,
@@ -23,6 +24,7 @@ import {HelpPageService} from '../helpandinfomodule/helppagesservice/helppageser
     ProjectDetailsComponent,
     ModuleListComponent,
     HelpDisplayComponnt,
+    ConfirmModalsComponent,
   ],
   entryComponents:[
     ProjectListComponent,
@@ -31,6 +33,7 @@ import {HelpPageService} from '../helpandinfomodule/helppagesservice/helppageser
     ProjectDetailsComponent,
     ModuleListComponent,
     HelpDisplayComponnt,
+    ConfirmModalsComponent
   ],
   providers:[
     HelpPageService,

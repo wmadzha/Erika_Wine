@@ -10,6 +10,7 @@ import {
     NbTabsetModule,
     NbDialogModule,
 } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { FormsModule } from '@angular/forms';
 export const ErikaWineUIModules:any[] = [
     NbCardModule,
@@ -21,6 +22,7 @@ export const ErikaWineUIModules:any[] = [
     NbUserModule,
     NbTabsetModule,
     FormsModule,
+    NbEvaIconsModule ,
     NbDialogModule.forChild(),
 ]
    

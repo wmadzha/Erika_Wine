@@ -7,6 +7,8 @@ import {GetProjectHttpDTO} from '../../dto/erikawineprojectdto';
 import { AddErrorComponent }from '../adderror/adderror';
 import {EditErrorComponent} from '../editerror/editerror';
 import {ErrorClassGenerator} from '../errorclassgenerator/errorclassgenerator';
+import { ConfirmModalsComponent } from '../../shareduimodules/confirmmodals/confirmmodals';
+import { OkConfirmModalData } from '../../shareduimodules/confirmmodals/data/okconfirmmodaldata';
 @Component({
   selector: 'error-list',
   templateUrl: './errorlist.html',
@@ -15,6 +17,7 @@ export class ErrorListComponent implements OnInit {
     @Input() GetProjectHttpDTO:GetProjectHttpDTO;
     @Input() GetModuleHttpDTO:GetModuleHttpDTO;
     DeleteErrorHttpDTO:DeleteErrorHttpDTO;
+    OkConfirmModalData: OkConfirmModalData;
     constructor(
       private svc:ErrorHttpService,
       private NbDialogService:NbDialogService,
@@ -81,12 +84,29 @@ export class ErrorListComponent implements OnInit {
     }
     Delete(dto:GetErrorHttpDTO)
     {
-       this.DeleteErrorHttpDTO = new DeleteErrorHttpDTO(dto.errorId);
-       this.svc.Delete(this.DeleteErrorHttpDTO).subscribe(
-         data=>{
-          this.Get();
-         }
-       )
+      this.OkConfirmModalData = new OkConfirmModalData();
+    this.OkConfirmModalData.Message = `Are you sure you want to delete error code : ` + dto.errorCode+
+    `
+    , Error Messange : ` + dto.erroMessage;
+    this.OkConfirmModalData.Title = `Delete Error Code : ` + dto.errorCode 
+    this.NbDialogService.open(ConfirmModalsComponent, {
+      context: {
+        OkConfirmModalData: this.OkConfirmModalData
+      },
+      closeOnBackdropClick: false,
+    }).onClose.subscribe(action => {
+      if (action === "confirm") {
+        this.DeleteErrorHttpDTO = new DeleteErrorHttpDTO(dto.errorId);
+        this.svc.Delete(this.DeleteErrorHttpDTO).subscribe(
+          data=>{
+           this.Get();
+          }
+        )
+      }
+      if (action === "cancel") {
+      }
+    });
+      
     }
 
     Generate()
