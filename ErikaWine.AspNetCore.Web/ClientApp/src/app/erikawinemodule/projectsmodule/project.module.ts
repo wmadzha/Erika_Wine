@@ -8,6 +8,8 @@ import {AddProjectComponent} from './add/addprojectcomponent';
 import {EditProjectComponent} from './edit/editprojectcomponent';
 import {ProjectDetailsComponent} from './details/projectdetailscomponent';
 import {ModuleListComponent} from '../modulesmodule/moduleslist/modulelist';
+import {HelpDisplayComponnt} from '../helpandinfomodule/helpdisplaycomponent/helpcomponent';
+import {HelpPageService} from '../helpandinfomodule/helppagesservice/helppageservice';
 @NgModule({
   imports: [
     ...ErikaWineUIModules,
@@ -20,6 +22,7 @@ import {ModuleListComponent} from '../modulesmodule/moduleslist/modulelist';
     EditProjectComponent,
     ProjectDetailsComponent,
     ModuleListComponent,
+    HelpDisplayComponnt,
   ],
   entryComponents:[
     ProjectListComponent,
@@ -27,6 +30,10 @@ import {ModuleListComponent} from '../modulesmodule/moduleslist/modulelist';
     EditProjectComponent,
     ProjectDetailsComponent,
     ModuleListComponent,
+    HelpDisplayComponnt,
+  ],
+  providers:[
+    HelpPageService,
   ]
 })
 export class ProjectModule {

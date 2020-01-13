@@ -5,6 +5,7 @@ import { NbDialogService } from '@nebular/theme';
 import { AddProjectComponent } from '../add/addprojectcomponent';
 import { EditProjectComponent} from '../edit/editprojectcomponent';
 import {ProjectDetailsComponent} from '../details/projectdetailscomponent';
+import {HelpDisplayComponnt} from '../../helpandinfomodule/helpdisplaycomponent/helpcomponent';
 @Component({
   selector: 'project-list',
   templateUrl: './projectlistcomponent.html',
@@ -75,4 +76,21 @@ export class ProjectListComponent implements OnInit {
             }
           );
     }
+    OpenHelp(helpersid:number)
+    {
+      this.NbDialogService.open(HelpDisplayComponnt, {
+        context: {
+          HelpDetails:helpersid
+        },
+        closeOnBackdropClick: false,
+      }).onClose.subscribe(action => {
+        if (action === "Refresh") {
+          this.Get();
+        }
+      });
+    }
+    
+
+
+
 }
