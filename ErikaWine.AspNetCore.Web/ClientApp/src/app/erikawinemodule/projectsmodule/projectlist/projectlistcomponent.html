@@ -1,6 +1,5 @@
-<nb-card>
-    <nb-card-body>
-      
+<nb-card [nbSpinner]='Loading' >
+    <nb-card-body  >
         <h6>  My Projects 
             <button nbButton status="info" style="float: right;" size='tiny' (click)="OpenHelp(1)"> ? </button>
         </h6>
@@ -40,6 +39,10 @@
                 <div class='col-md-12'>
                    <hr>
                 </div>
+<!-- 
+                <div class="col-md-12">
+                    <ng2-smart-table [settings]="settings" [source]="GetProjectHttpDTO"  ></ng2-smart-table>
+                </div> -->
             </div>
         </div>
     </nb-card-body>

@@ -13,6 +13,7 @@ import { OkConfirmModalData } from '../../shareduimodules/confirmmodals/data/okc
   templateUrl: './projectlistcomponent.html',
 })
 export class ProjectListComponent implements OnInit {
+  Loading:false;
   DeleteProjectHttpDTO: DeleteProjectHttpDTO;
   OkConfirmModalData: OkConfirmModalData;
   constructor(
@@ -88,9 +89,6 @@ export class ProjectListComponent implements OnInit {
 
       }
     });
-
-
-
   }
   OpenHelp(helpersid: number) {
     this.NbDialogService.open(HelpDisplayComponnt, {
@@ -104,4 +102,22 @@ export class ProjectListComponent implements OnInit {
       }
     });
   }
+
+  ScreenHeight:number;
+  SetupPageHeight()
+  {
+    this.ScreenHeight = window.innerHeight- 200
+  }
+
+
+  settings = {
+    actions: false,
+    columns: {
+      projectName: {
+        title: 'Project Name'
+      },
+     
+    }
+  };
+
 }

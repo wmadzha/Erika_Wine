@@ -12,6 +12,7 @@ import {
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { FormsModule } from '@angular/forms';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 export const ErikaWineUIModules:any[] = [
     NbCardModule,
     NbSelectModule,
@@ -23,6 +24,7 @@ export const ErikaWineUIModules:any[] = [
     NbTabsetModule,
     FormsModule,
     NbEvaIconsModule ,
+    Ng2SmartTableModule,
     NbDialogModule.forChild(),
 ]
    

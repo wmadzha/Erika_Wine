@@ -68,10 +68,10 @@ export class SeeSharpResultComponent implements OnInit {
                 new SystemError()
                 {
                     ErrorId = new Guid("`+element.errorId+`"),
-                    ErrorCode : "`+element.errorCode+`",
-                    ErroMessage : "`+element.erroMessage+`",
-                    ErrorDescription : "`+element.errorDescription+`",
-                    ErrorModulePrefix : "`+ this.GetModuleHttpDTO.moduleErrorPrefix+`",    
+                    ErrorCode = "`+element.errorCode+`",
+                    ErroMessage = "`+element.erroMessage+`",
+                    ErrorDescription = "`+element.errorDescription+`",
+                    ErrorModulePrefix = "`+ this.GetModuleHttpDTO.moduleErrorPrefix+`",    
                 }, `;
             }
         });
