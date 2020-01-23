@@ -1,3 +1,14 @@
+# Stacks
+
+1. Asp.Net Core
+
+2. Angular
+
+3. EF Core
+
+4. MS SQL Express ( Local ) 
+
+
 # Erika_Wine
 Erika Wine - Error Code Manager
 
@@ -28,6 +39,9 @@ https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine2.png?raw=true
 
 ![alt text](
 https://github.com/wmadzha/Erika_Wine/blob/master/Assets/ErikaWine3.png?raw=true)
+
+
+
 
 
 **Special Thanks To**
