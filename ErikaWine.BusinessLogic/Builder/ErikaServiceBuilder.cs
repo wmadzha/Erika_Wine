@@ -22,6 +22,9 @@ namespace ErikaWine.BusinessLogic.Builder
             string connection = Configuration.GetConnectionString("erikaconnection");
             switch (storageType)
             {
+                case DataStoreType.PostgreSQL:
+                    svc.AddDbContext<ErrorCodeBaseContext>(options => options.UseNpgsql(connection));
+                    break;
                 case DataStoreType.Oracle:
                     svc.AddDbContext<ErrorCodeBaseContext>(options => options.UseOracle(connection));
                     break;
@@ -45,6 +48,7 @@ namespace ErikaWine.BusinessLogic.Builder
             MicrosoftSQL,
             SQLLite,
             Oracle,
+            PostgreSQL,
         }
     }
 }
